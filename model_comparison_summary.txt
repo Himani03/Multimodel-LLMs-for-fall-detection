@@ -1,0 +1,36 @@
+
+🧠 MODEL PERFORMANCE COMPARISON (50 Samples)
+
+| Metric     | Zero-Shot | Few-Shot | Chain-of-Thought |
+|------------|-----------|----------|------------------|
+| Accuracy   | 0.860     | 0.900    | 0.920            |
+| Precision  | 0.8678    | 0.9000   | 0.9165           |
+| Recall     | 0.8570    | 0.9027   | 0.9220           |
+| F1-Score   | 0.8594    | 0.9001   | 0.9187           |
+
+🔍 MODEL-SPECIFIC INSIGHTS
+
+Zero-Shot:
+- Precision high for Walking (1.00), Standing (0.88).
+- Slight weaknesses in Falling recall and F1-score.
+- Strength: generalizes well without prior examples.
+- Weakness: lower handling of nuanced activity types.
+
+Few-Shot:
+- All metrics improve, especially for Falling (0.93 F1).
+- Walking perfectly recalled (1.00).
+- Slight dip in Standing recall (0.80).
+- Strength: benefits from few labeled examples.
+- Weakness: still occasional confusion in similar classes.
+
+Chain-of-Thought:
+- Best in all metrics: accuracy (0.92), F1 (0.9187).
+- Falling perfectly recalled (1.00) and precision at 0.92.
+- Most consistent across all 4 classes.
+- Strength: reasoning through complex motions.
+- Weakness: more computationally expensive.
+
+🏁 Summary:
+🥇 Chain-of-Thought is top performer.
+🥈 Few-Shot is a close second.
+🥉 Zero-Shot is solid but less reliable on subtle classes.
